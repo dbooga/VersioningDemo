@@ -52,7 +52,6 @@
                     <descriptorRefs>
                     	   <descriptorRef>jar-with-dependencies</descriptorRef>
                         <descriptorRef>project</descriptorRef>
-                        <descriptorRef>src</descriptorRef>
                     </descriptorRefs>
                 </configuration>
                 <executions>
@@ -72,8 +71,7 @@
                     <allowTimestampedSnapshots>true</allowTimestampedSnapshots>
                     <tagNameFormat>@{project.version}</tagNameFormat>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
-                    <releaseProfiles>releases</releaseProfiles>
-                    
+                    <releaseProfiles>releases</releaseProfiles>                    
                 </configuration>
             </plugin>
         </plugins>
