@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.ea</groupId>
+    <groupId>com.tdxio.tst</groupId>
     <artifactId>VersioningDemo</artifactId>
     <version>0.7-SNAPSHOT</version>
 
@@ -22,6 +22,19 @@
         <url>https://github.com/dbooga/VersioningDemo</url>
         <tag>@{project.version}</tag>
     </scm>
+    
+     <distributionManagement>
+        <repository>
+            <id>tdm-releases</id>
+            <name>TDM Releases</name>
+            <url>http://tdxagent.centralus.cloudapp.azure.com:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>tdm-snapshots</id>
+            <name>TDM Snapshots</name>
+            <url>http://tdxagent.centralus.cloudapp.azure.com:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <build>
         <plugins>

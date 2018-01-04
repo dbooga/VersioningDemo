@@ -1,4 +1,4 @@
-package org.ea;
+package com.tdxio.tst;
 
 /**
  * Versioning demo created by Daniel Persson
