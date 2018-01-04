@@ -29,7 +29,7 @@
             <name>TDM Releases</name>
             <url>http://tdxagent.centralus.cloudapp.azure.com:8081/nexus/content/repositories/releases/</url>
         </repository>
-         mvn re<snapshotRepository>
+        <snapshotRepository>
             <id>tdm-snapshots</id>
             <name>TDM Snapshots</name>
             <url>http://tdxagent.centralus.cloudapp.azure.com:8081/nexus/content/repositories/snapshots/</url>
