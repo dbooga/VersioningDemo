@@ -46,12 +46,11 @@
                         <manifest>
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                             <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
-                            <mainClass>org.ea.VersioningDemo</mainClass>
+                            <mainClass>com.tdxio.tst.VersioningDemo</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
                     	   <descriptorRef>jar-with-dependencies</descriptorRef>
-                        <descriptorRef>project</descriptorRef>
                     </descriptorRefs>
                 </configuration>
                 <executions>
