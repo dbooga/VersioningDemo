@@ -2,34 +2,28 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.tdxio.tst</groupId>
-    <artifactId>VersioningDemo</artifactId>
-    <version>0.13-SNAPSHOT</version>
+    <!-- parent coordinates -->
+    <parent>
+            <groupId>com.tdxio.tst</groupId>
+            <artifactId>VersioningDemo</artifactId>
+            <version>0.13-SNAPSHOT</version>
+            <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <!-- project coordinates -->
+    <!--<groupId>com.tdxio.tst</groupId>!-->
+    <artifactId>PrintVersion</artifactId>
+    <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-
-    <modules>
-                <!-- <module>PrintVersion</module> !-->
-                <module>Distribution</module>
-    </modules>
-
-    <properties>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <encoding>UTF-8</encoding>
-        <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
-        <project.resources.sourceEncoding>${encoding}</project.resources.sourceEncoding>
-        <archetype.encoding>${encoding}</archetype.encoding>
-    </properties>
-    
+    <!--
     <scm>
         <connection>scm:git:git@github.com:dbooga/VersioningDemo.git</connection>
         <developerConnection>scm:git:git@github.com:dbooga/VersioningDemo.git</developerConnection>
         <url>https://github.com/dbooga/VersioningDemo</url>
         <tag>@{project.version}</tag>
     </scm>
-    
-    
+    !-->
+    <!--
      <distributionManagement>
         <repository>
             <id>tdm-releases</id>
@@ -42,11 +36,9 @@
             <url>http://tdxagent.centralus.cloudapp.azure.com:8081/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
-    
-
+    !-->
     <build>
         <plugins>
-            <!--
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.0.0</version>
@@ -55,7 +47,7 @@
                         <manifest>
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                             <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
-                            <mainClass>com.tdxio.tst.VersioningDemo</mainClass>
+                            <mainClass>com.tdxio.tst.PrintVersion</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
@@ -71,7 +63,6 @@
                     </execution>
                 </executions>
             </plugin>
-            !-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
